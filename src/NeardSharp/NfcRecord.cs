@@ -175,7 +175,7 @@ namespace NeardSharp
         /// </summary>
         /// <param name="appPackage">Android package identifier.</param>
         /// <returns>Valid <see cref="NfcRecord"/> of type <see cref="RecordType.AAR"/>.</returns>
-        public static NfcRecord FromAndroidPackage(string appPackage) => new NfcRecord(RecordType.AAR, androidPackage: appPackage);
+        public static NfcRecord FromAndroidPackage(string appPackage) => new NfcRecord(RecordType.AAR, androidPackage: appPackage, encoding: "UTF-8");
         /// <summary>
         /// Creates <see cref="NfcRecord"/> from specified <paramref name="text"/>.
         /// </summary>
