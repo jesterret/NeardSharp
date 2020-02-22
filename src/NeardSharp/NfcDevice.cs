@@ -19,7 +19,7 @@ namespace NeardSharp
         /// <summary>
         /// The object path of the adapter the device belongs to.
         /// </summary>
-        public string Adapter { get; }
+        public ObjectPath Adapter { get; }
         /// <summary>
         /// List of NDEF records object paths.
         /// </summary>
@@ -28,7 +28,7 @@ namespace NeardSharp
         internal NfcDevice(IDictionary<string, object> keyValues, ObjectPath objectPath) : base(objectPath)
         {
             Name = (string)keyValues[nameof(Name)];
-            Adapter = (string)keyValues[nameof(Adapter)];
+            Adapter = (ObjectPath)keyValues[nameof(Adapter)];
             Records = ((ObjectPath[])keyValues[nameof(Records)]).ToList();
         }
 

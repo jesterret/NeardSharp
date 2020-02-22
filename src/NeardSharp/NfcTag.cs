@@ -34,7 +34,7 @@ namespace NeardSharp
         /// <summary>
         /// The object path of the adapter the tag belongs to.
         /// </summary>
-        public string Adapter { get; }
+        public ObjectPath Adapter { get; }
         /// <summary>
         /// List of NDEF records object paths.
         /// </summary>
@@ -53,7 +53,7 @@ namespace NeardSharp
             Type = (string)keyValues[nameof(Type)];
             Protocol = (string)keyValues[nameof(Protocol)];
             ReadOnly = (bool)keyValues[nameof(ReadOnly)];
-            Adapter = (string)keyValues[nameof(Adapter)];
+            Adapter = (ObjectPath)keyValues[nameof(Adapter)];
             Records = ((ObjectPath[])keyValues[nameof(Records)]).ToList();
             Iso14443aUid = (byte[])keyValues[nameof(Iso14443aUid)];
             Iso14443aAtqa = (byte[])keyValues[nameof(Iso14443aAtqa)];
