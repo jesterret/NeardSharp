@@ -84,9 +84,9 @@ namespace NeardSharp
             var dict = obj.interfacesAndProperties;
             if (dict.TryGetValue(_recordInterface, out var recordData))
                 _recordFound.OnNext(new NfcRecord(recordData, obj.objectPath));
-            else if (dict.TryGetValue(_tagInterface, out var tagData))
+            if (dict.TryGetValue(_tagInterface, out var tagData))
                 _tagFound.OnNext(new NfcTag(tagData, obj.objectPath));
-            else if (dict.TryGetValue(_deviceInterface, out var deviceData))
+            if (dict.TryGetValue(_deviceInterface, out var deviceData))
                 _deviceFound.OnNext(new NfcDevice(deviceData, obj.objectPath));
         }
 
