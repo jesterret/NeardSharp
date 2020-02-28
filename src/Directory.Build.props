@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" Version="*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="*" PrivateAssets="All"/>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="*" PrivateAssets="all" />
     <PackageReference Include="ErrorProne.NET.Structs" Version="*" PrivateAssets="all" />
   </ItemGroup>
